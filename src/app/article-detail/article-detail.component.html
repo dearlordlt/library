@@ -1,3 +1,16 @@
-<p>
-    article-detail works!
-</p>
+<div *ngIf="article">
+    <h2>{{article.name}} details!</h2>
+
+    <div><label>id: </label>{{article.id}}</div>
+
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="article.name" placeholder="name"/>
+    </div>
+
+    <div>
+        <label>text: </label>
+        <input [(ngModel)]="article.text" placeholder="text"/>
+    </div>
+
+</div>

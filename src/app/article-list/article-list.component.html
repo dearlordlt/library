@@ -1,3 +1,8 @@
-<p>
-    article-list works!
-</p>
+<ul class="articles">
+    <li *ngFor="let article of articles"
+        [class.selected]="article === selectedArticle"
+        (click)="onSelect(article)">
+        <span class="badge">{{article.id}}</span> {{article.name}}
+    </li>
+</ul>
+<app-article-detail [article]="selectedArticle"></app-article-detail>
