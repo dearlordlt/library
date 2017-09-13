@@ -6,24 +6,24 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ArticleListComponent} from './article-list/article-list.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'article/:id', component: ArticleDetailComponent},
-  {
-    path: 'articles',
-    component: ArticleListComponent,
-    data: {title: 'Article List'}
-  },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {path: '**', component: PageNotFoundComponent}
+    {path: 'home', component: HomeComponent},
+    {path: 'article/:id', component: ArticleDetailComponent},
+    {
+        path: 'articles',
+        component: ArticleListComponent,
+        data: {title: 'Article List'}
+    },
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
