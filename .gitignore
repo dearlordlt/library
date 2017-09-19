@@ -92,4 +92,5 @@ typings/
 
 # dotenv environment variables file
 
+# Webstorm
 .idea/
