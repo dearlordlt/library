@@ -1,5 +1,5 @@
-<ul class="articles">
-    <li *ngFor="let article of articles"
+<ul class="articles list-group">
+    <li class="list-group-item" *ngFor="let article of articles"
         [class.selected]="article === selectedArticle"
         (click)="onSelect(article)">
         <span class="badge">{{article.id}}</span> {{article.name}}

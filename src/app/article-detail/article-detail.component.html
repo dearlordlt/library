@@ -3,14 +3,14 @@
 
     <div><label>id: </label>{{article.id}}</div>
 
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="article.name" placeholder="name"/>
+    <div class="form-group">
+        <label for="article-name">name: </label>
+        <input class="form-control" id="article-name" [(ngModel)]="article.name" placeholder="name"/>
     </div>
 
-    <div>
-        <label>text: </label>
-        <input [(ngModel)]="article.text" placeholder="text"/>
+    <div class="form-group">
+        <label for="article-text">text: </label>
+        <input class="form-control" id="article-text" [(ngModel)]="article.text" placeholder="text"/>
     </div>
 
 </div>
