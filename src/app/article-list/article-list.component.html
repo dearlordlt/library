@@ -1,8 +1,14 @@
-<ul class="articles list-group">
-    <li class="list-group-item" *ngFor="let article of articles"
-        [class.selected]="article === selectedArticle"
-        (click)="onSelect(article)">
-        <span class="badge">{{article.id}}</span> {{article.name}}
-    </li>
-</ul>
-<app-article-detail [article]="selectedArticle"></app-article-detail>
+<div class="row">
+    <div class="col-md-6">
+        <ul class="articles list-group">
+            <li class="list-group-item" *ngFor="let article of articles"
+                [class.selected]="article === selectedArticle"
+                (click)="onSelect(article)">
+                <span class="badge">{{article.id}}</span> {{article.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <app-article-detail [article]="selectedArticle"></app-article-detail>
+    </div>
+</div>
