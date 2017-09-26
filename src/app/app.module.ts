@@ -7,10 +7,11 @@ import {HomeComponent} from './home/home.component';
 import {ArticleDetailComponent} from './article-detail/article-detail.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ArticleListComponent} from './article-list/article-list.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
 import {CounterComponent} from './counter/counter.component';
-import {counterReducer} from "./reducers/counter";
+import {counterReducer} from './reducers/counter';
 import {StoreModule} from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,10 @@ import {StoreModule} from '@ngrx/store';
         BrowserModule,
         AppRoutingModule,
         FormsModule,
-        StoreModule.provideStore({counter: counterReducer})
+        StoreModule.provideStore({counter: counterReducer}),
+        StoreDevtoolsModule.instrumentStore({
+            monitor: counterReducer
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]
